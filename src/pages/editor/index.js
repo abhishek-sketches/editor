@@ -1,15 +1,12 @@
-import React from 'react';
-import { useRouter } from 'next/navigation';
-const Editor = () => {
-  const router = useRouter();
+import Link from "next/link";
 
+export default function EditorIndex() {
   return (
-    <div>
-      <div className=' border border-black px-3 py-3 w-fit m-5' onClick={()=>{ router.push("/editor/0")}}>
-        Editor
-      </div>
-    </div>
+    <main className="mx-auto max-w-3xl p-6">
+      <h1 className="mb-4 text-2xl font-semibold">Outline editor</h1>
+      <Link href="/editor/0" className="btn inline-block">
+        Open editor
+      </Link>
+    </main>
   );
-};
-
-export default Editor;
+}
